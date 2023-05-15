@@ -6,9 +6,11 @@ var ic = cnvs.getContext("2d");
 var bg = new Image();
 var kses = new Audio();
 var isaret = new Image();
+var muzik = new Audio();
 kses.src = "ses/efekt.mp3"
 bg.src = "resim/bg.png"
 isaret.src="resim/isaret.png"
+muzik.src="ses/muzik.mp3"
 
 // değişkenler
 var karakterler = 'ASDW';
@@ -24,7 +26,7 @@ function ciz(){
     //resimlerin ekranda gösteriyor
     ic.drawImage(bg,0,0);
     ic.drawImage(isaret,isX,280);
-
+    muzik.play();
     //Tuşa göre ekrandaki resmi değiştiriyor
 
     //Skoru ve kalan canı ekranda gösteriyor
@@ -102,3 +104,4 @@ function tusdegistir (timer, tus){
 }
 
 ciz();
+muzik.play();
